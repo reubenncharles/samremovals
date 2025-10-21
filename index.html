@@ -132,20 +132,25 @@ a.dropdown-link:hover,
 .airtasker-section {
   background: rgba(255, 107, 44, 0.08);
   border-radius: 24px;
+  padding: 3.5rem 0;
 }
 .airtasker-card {
   display: flex;
   align-items: center;
   gap: 2.5rem;
   padding: 3rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 .airtasker-card-logo {
-  width: 180px;
+  width: 200px;
   max-width: 100%;
   height: auto;
+  flex-shrink: 0;
 }
 .airtasker-card-content {
+  flex: 1;
+  min-width: 280px;
   max-width: 640px;
 }
 .airtasker-card-list {
@@ -157,10 +162,19 @@ a.dropdown-link:hover,
 .airtasker-card-list li {
   margin-bottom: 0.4rem;
 }
+@media (max-width: 991px) {
+  .airtasker-card {
+    flex-wrap: wrap;
+    padding: 2.5rem;
+    gap: 1.75rem;
+  }
+  .airtasker-card-content {
+    margin-left: 0;
+  }
+}
 @media (max-width: 767px) {
   .airtasker-card {
     padding: 2rem;
-    gap: 1.5rem;
   }
 }
 .content-description-left {
@@ -184,7 +198,6 @@ a.dropdown-link:hover,
 .split-pricing-item.bg-primary-1, .split-pricing-title-wrap.bg-primary-1, .split-pricing-title-wrap.bg-primary-1 * { color: #ffffff !important; }
 .split-pricing-item.bg-primary-1 .split-pricing-price { color: #ffffff !important; }
 
-.bg-service-item-inline 
 .bg-service-section-title, .background-video-title, .cta-title { color: #ffffff !important; }
 .bento-item-three-content .no-margin-bottom { color: #ffffff !important; text-align: left !important; }
 
